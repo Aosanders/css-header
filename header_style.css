@@ -1,0 +1,114 @@
+
+
+body, html{
+  margin:0;
+  padding:0;
+  height:100vh;
+}
+
+header{
+  background-image: linear-gradient(to right, #772B73, #1B094F );
+  max-height: 100px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.sub-menu{
+  background-image: linear-gradient(to left,#fff,#E57A27);
+  flex-direction: column;
+  font-family: 'Russo One', sans-serif;
+  text-align: center;
+  list-style-type: none;
+  margin:auto;
+  max-width: 10em;
+  min-height: 10em;
+  padding:0;
+  border-top: 5px #4271EC solid;
+  border-left: 5px #963BB2 solid;
+  border-radius: 5px;
+  visibility: hidden;
+  opacity:0;
+  transition: opacity 1s ease-in-out 0s, visibility .85s linear ;
+
+}
+
+.sub-menu li{
+  padding:10px;
+  margin:auto;
+  //background: red;
+}
+
+.row{
+  width: 100%;
+}
+
+.d-flex{
+  display: flex;
+}
+
+#logo-wrap{
+  justify-content: center;
+}
+
+.logo{
+  width:85px;
+  height: 100px;
+  transition: margin 1s ease, height 1s ease, width 1s ease;
+}
+
+.logo:hover{
+  margin: 15px 50px 0 50px;
+}
+
+.logo:hover + .sub-menu{
+  visibility: visible;
+  opacity:1;
+}
+
+
+@media (max-width:1200px) and (min-width:850px) {
+  header{
+    max-height:135px;
+  }
+  .logo{
+    width:114px;
+    height: 135px;
+    margin:0 30px;
+  }
+  .logo:hover{
+    margin: 20px 80px 0 80px;
+  }
+
+  .sub-menu{
+    max-width: 15em;
+  }
+}
+
+@media (min-width:1200px){
+  header{
+    max-height:180px;
+  }
+
+  .logo{
+    width:153px;
+    height: 180px;
+    margin:0 75px;
+  }
+
+  .logo:hover{
+    margin: 30px 200px 0 200px;
+  }
+
+    .sub-menu{
+    max-width: 20em;
+  }
+}
+
+
+.outline{
+    outline:1px red solid;
+}
